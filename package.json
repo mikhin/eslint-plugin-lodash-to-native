@@ -1,0 +1,26 @@
+{
+  "name": "@mikhin/eslint-plugin-lodash-to-native",
+  "version": "0.0.0",
+  "description": "Transform lodash map to native map.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Yuri Mikhin",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive",
+    "lint:js": "eslint ./lib --fix"
+  },
+  "dependencies": {
+    "lodash": "4.17.15",
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "mocha": "7.1.1"
+  }
+}
