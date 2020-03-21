@@ -1,51 +1,39 @@
 # eslint-plugin-lodash-to-native
 
-Transform lodash map to native map.
+Правило находит использование функции `_.map` из библиотеки Lodash, например `_.map(collection, fn)`, и, если это возможно, предлагает заменить его на использование нативного `Array#map`.
 
-## Installation
+## Установка
 
-You'll first need to install [ESLint](http://eslint.org):
+- установить [ESLint](http://eslint.org):
 
 ```
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-lodash-to-native`:
+- установить `@mikhin/eslint-plugin-lodash-to-native`:
 
 ```
-$ npm install eslint-plugin-lodash-to-native --save-dev
+$ npm install @mikhin/eslint-plugin-lodash-to-native --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-lodash-to-native` globally.
+## Использование
 
-## Usage
-
-Add `lodash-to-native` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Добавить `lodash-to-native` в раздел `plugins` файла `.eslintrc`.
 
 ```json
 {
     "plugins": [
-        "lodash-to-native"
+        "@mikhin/lodash-to-native"
     ]
 }
 ```
 
-
-Then configure the rules you want to use under the rules section.
+Добавить `@mikhin/lodash-to-native/map` в раздел `rules` файла `.eslintrc`.
 
 ```json
 {
-    "rules": {
-        "lodash-to-native/rule-name": 2
-    }
+    "rules": [
+        "@mikhin/lodash-to-native/map"
+    ]
 }
 ```
-
-## Supported Rules
-
-* Fill in provided rules here
-
-
-
-
-
